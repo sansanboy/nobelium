@@ -1,6 +1,6 @@
 const BLOG = {
-  title: 'DaJun Blog',
-  author: 'MoMaDa2023',
+  title: 'Jim Blog',
+  author: 'JimYan',
   email: 'nefu.yzj@gmail.com',
   link: 'https://nobelium.vercel.app',
   description: '技术分享',
