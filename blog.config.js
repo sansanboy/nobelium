@@ -1,25 +1,27 @@
 const BLOG = {
-  title: 'MoMaDa Note',
+  title: 'JimBlog',
   author: 'JimYan',
   email: 'nefu.yzj@gmail.com',
-  link: 'https://momada.52shuzhai.com',
-  description: '学习笔记记录',
+  link: 'https://www.dajun.info',
+  description: '技术分享',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#18181B', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2022, // If leave this empty, current year will be used.
+  since: 2023, // If leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: true,
   showAbout: true,
+  showWeibo: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
   socialLink: 'https://twitter.com/MoMaDa2022',
   seo: {
-    keywords: ['momada blog', '技术日志', 'Notion'],
+    keywords: ['Blog', 'Website', '技术'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
@@ -32,7 +34,7 @@ const BLOG = {
       domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
     },
     gaConfig: {
-      measurementId: 'G-7Q8136H55C' // e.g: G-XXXXXXXXXX
+      measurementId: 'G-Z5Y9XK228T' // e.g: G-XXXXXXXXXX
     }
   },
   comment: {
