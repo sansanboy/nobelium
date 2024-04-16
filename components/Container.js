@@ -35,6 +35,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta property="og:locale" content={BLOG.lang} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
+        <meta name="google-adsense-account" content="ca-pub-8125429196409228"></meta>
         <meta
           property="og:url"
           content={meta.slug ? `${url}/${meta.slug}` : url}
