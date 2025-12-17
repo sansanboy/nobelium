@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'DaJunBlog',
+  title: 'DaJun',
   author: 'Dajun',
   email: 'nefu.yzj@gmail.com',
   link: 'https://www.dajun.info',

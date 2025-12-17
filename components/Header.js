@@ -10,11 +10,12 @@ const NavBar = () => {
   const locale = useLocale()
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.PHOTOS, to: 'https://photos.dajun.info/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 4, name: locale.NAV.WEIBO, to: '/weibo', show: BLOG.showWeibo },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 1, name: locale.NAV.SEARCH, to: '/search', show: true },
+    { id: 2, name: locale.NAV.WEIBO, to: '/weibo', show: BLOG.showWeibo },
+    { id: 3, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
+    { id: 4, name: locale.NAV.PHOTOS, to: 'https://photos.dajun.info/', show: true },
+    { id: 5, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout }
+
   ]
   return (
     <div className="flex-shrink-0">
