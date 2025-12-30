@@ -9,7 +9,7 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
+    // { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
     { id: 1, name: locale.NAV.SEARCH, to: '/search', show: true },
     { id: 2, name: locale.NAV.WEIBO, to: '/weibo', show: BLOG.showWeibo },
     // { id: 3, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
@@ -121,6 +121,7 @@ export default function Header ({ navBarTitle, fullWidth }) {
             siteDescription={BLOG.description}
             postTitle={navBarTitle}
             onClick={handleClickHeader}
+            href={BLOG.path || '/'}
           />
         </div>
         <NavBar />
@@ -129,18 +130,20 @@ export default function Header ({ navBarTitle, fullWidth }) {
   )
 }
 
-const HeaderName = forwardRef(function HeaderName ({ siteTitle, siteDescription, postTitle, onClick }, ref) {
+const HeaderName = forwardRef(function HeaderName ({ siteTitle, siteDescription, postTitle, onClick, href }, ref) {
   return (
-    <p
-      ref={ref}
-      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1 items-center"
-      onClick={onClick}
-    >
-      {postTitle && <span className="post-title row-start-1 col-start-1">{postTitle}</span>}
-      <span className="row-start-1 col-start-1">
-        <span className="site-title">{siteTitle}</span>
-        <span className="site-description font-normal">, {siteDescription}</span>
-      </span>
-    </p>
+    <Link href={href} className="ml-2">
+      <p
+        ref={ref}
+        className="header-name font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1 items-center cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={onClick}
+      >
+        {postTitle && <span className="post-title row-start-1 col-start-1">{postTitle}</span>}
+        <span className="row-start-1 col-start-1">
+          <span className="site-title">{siteTitle}</span>
+          <span className="site-description font-normal">, {siteDescription}</span>
+        </span>
+      </p>
+    </Link>
   )
 })
